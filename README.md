@@ -1,15 +1,18 @@
 # Multithreaded-Banking-Simulation
 
-## Opis projektu
-Ten projekt demonstruje wykorzystanie wątków w C do symulacji operacji bankowych, takich jak wpłaty i wypłaty, z użyciem mechanizmów synchronizacji (mutexów i zmiennych warunkowych). Program implementuje system zabezpieczający sekcje krytyczne oraz zapewniający poprawność operacji na wspólnym zasobie.
+## Project Description
 
-## Pliki
-- `zad1.c`: Podstawowa wersja programu, która symuluje wpłaty i wypłaty w oparciu o sekcje krytyczne zabezpieczone muteksem.
-- `zad2.c`: Rozszerzona wersja programu, dodająca logikę oczekiwania na wystarczające saldo przed wykonaniem wypłaty oraz dodatkowe mechanizmy synchronizacji.
+This project demonstrates the use of threads in C to simulate banking operations, such as deposits and withdrawals, with synchronization mechanisms (mutexes and condition variables). The program implements a system to secure critical sections and ensure the correctness of operations on a shared resource.
 
-## Funkcjonalności
-1. Symulacja równoczesnych wpłat i wypłat na wspólne konto.
-2. Zabezpieczenie sekcji krytycznych przy użyciu:
-   - Muteksów (`pthread_mutex_t`).
-   - Zmiennych warunkowych (`pthread_cond_t`).
-3. Obsługa sytuacji, w których saldo nie wystarcza na wypłatę, za pomocą oczekiwania na zmiennej warunkowej.
+## Files
+
+- `zad1.c`: A basic version of the program that simulates deposits and withdrawals based on critical sections secured by a mutex.
+- `zad2.c`: An extended version of the program that adds logic to wait for sufficient balance before processing withdrawals, along with additional synchronization mechanisms.
+
+## Features
+
+1. Simulation of concurrent deposits and withdrawals on a shared account.
+2. Protection of critical sections using:
+   - **Mutexes (`pthread_mutex_t`)**.
+   - **Condition variables (`pthread_cond_t`)**.
+3. Handling situations where the balance is insufficient for withdrawal by waiting via condition variables.
